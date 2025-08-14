@@ -1,6 +1,10 @@
 @echo off
 setlocal
 
+echo.
+echo 🟢 Dale a cualquier tecla para continuar
+pause > nul
+
 :: Abrir PowerShell y ejecutar comandos
 set "SCRIPTDIR=%~dp0"
 
@@ -15,4 +19,5 @@ powershell -NoExit -Command ^
     "pip install --upgrade pip;" ^
     "Write-Host 'Instalando dependencias...';" ^
     "pip install -r requirements.txt;" ^
+    "Write-Host 'Dependencias instaladas';" ^
     "pause"
